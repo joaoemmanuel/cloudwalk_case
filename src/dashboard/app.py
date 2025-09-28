@@ -112,7 +112,7 @@ df_cardcount    = pd.read_sql_query(risk_cardcount, conn)
 conn.close()
 
 # Application title
-st.title('Market Research - Sports Shoes on :blue[Mercado Livre]')
+st.title('Cloudwalk - Risk Analysis')
 
 # Setting up the layout for KPI visualization
 st.subheader('Main KPIs')
@@ -120,4 +120,4 @@ col1, col2, col3 = st.columns(3)
 
 # KPI 1: Item Quantity Total
 total_items = df_cardcount.shape[0]
-col1.metric(label='Item quantity total', value=total_items, border=True)
+col1.metric(label='Count for Testing', value=total_items, border=True)
