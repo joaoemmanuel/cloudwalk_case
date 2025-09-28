@@ -15,9 +15,6 @@ pd.options.display.max_columns = None
 df['transaction_time'] = pd.to_datetime(df['transaction_date']).dt.strftime('%H:%M:%S')
 df['transaction_date'] = pd.to_datetime(df['transaction_date']).dt.strftime('%Y/%m/%d')
 
-# Filling empty info in device_id column with 'null' and converting column to String
-df['device_id'] = df['device_id'].fillna('null').astype(str)
-
 # Reordering columns
 df_reordered = df.iloc[:, [0, 1, 2, 4, 8, 3, 5, 6, 7]]
 
